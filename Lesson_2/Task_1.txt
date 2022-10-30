@@ -1,0 +1,8 @@
+kdir test
+cd test
+mkdir test1
+cd test1
+touch main.py
+cd ..
+rm -r test1
+

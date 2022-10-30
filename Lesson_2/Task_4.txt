@@ -1,0 +1,7 @@
+mkdir Task_4
+cd Task_4
+python3 -m venv venv
+source venv/bin/activate
+touch Task_4_main.py
+python3 ./Task_4_main.py
+deactivate

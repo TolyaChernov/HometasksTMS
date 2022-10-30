@@ -1,0 +1,8 @@
+mkdir test
+cd test
+mkdir test1
+cd test1
+touch Task_1_main.py
+cd ..
+rm -r test1
+

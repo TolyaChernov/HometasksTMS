@@ -1,7 +1,0 @@
-mkdir Task_3
-cd Task_3
-python3 -m venv venv
-cd venv && touch main.py
-python3 ./Task_3.main.py
-
-

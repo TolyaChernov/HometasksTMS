@@ -1,5 +1,5 @@
-#!/bin/bash
-#!/usr/bin/python3
+# !/bin/bash
+# !/usr/bin/python3
 
 words = input("Введите предложение: ")
 symbol = input("Введите символ: ")

@@ -1,5 +1,5 @@
 #!/bin/bash
-#!/usr/bin/python3
+# !/usr/bin/python3
 
 word1 = input("Введите первое слово: ")
 word2 = input("Введите второе слово: ")

@@ -75,3 +75,4 @@ elif choise == 3:
 temp = float(input("Ввести температуру для конвертации: "))
 temper.setTemp(temp)
 temper.letsgo()
+

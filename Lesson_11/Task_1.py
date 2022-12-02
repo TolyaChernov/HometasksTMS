@@ -93,3 +93,4 @@ pre_pay = 237.9
 
 # Итоговая стоимость с учетом предоплаты
 Zakaz.prepay(price, pre_pay)
+

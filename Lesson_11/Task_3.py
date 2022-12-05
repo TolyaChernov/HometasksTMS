@@ -28,7 +28,7 @@ class Deque(DataObject):
     @classmethod
     def append_left(cls, i):
         """Функция добавления элементов в очередь слвева"""
-        _k: int = 0
+        _k = 0
         cls._proc_add(cls, i, cls.j, _k)
 
     @classmethod

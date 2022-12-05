@@ -5,13 +5,11 @@ from abc import ABC, abstractmethod
 
 class Interface_temp(ABC):
 
-    @abstractmethod
     def setTemp(self, temp):
-        pass
+        self.temp = temp
 
-    @abstractmethod
-    def getTemp(self):
-        pass
+    def setTemp(self, temp):
+        self.temp = temp
 
     @abstractmethod
     def letsgo(self):
@@ -20,43 +18,19 @@ class Interface_temp(ABC):
 
 class Cel(Interface_temp):
 
-    def setTemp(self, temp):
-        self.temp = temp
-
-    def getTemp(self):
-        return self.temp
-
-    def letsgo(self):
+      def letsgo(self):
         print(f"{temp}°C == {temp + 273.15}°K == {round(temp * 9 / 5 + 32, 3)}°F ")
         return temp, temp + 273.15, round(temp * 9 / 5 + 32, 3)
 
 
 class Kel(Interface_temp):
 
-    def __init__(self):
-        self.temp = None
-
-    def setTemp(self, temp):
-        self.temp = temp
-
-    def getTemp(self):
-        return self.temp
-
-    def letsgo(self):
+      def letsgo(self):
         print(f"{round(temp - 273.15, 3)}°C == {temp}°K == {round((temp - 273.15) * 9 / 5 + 32, 3)}°F ")
         return round(temp - 273.15, 3), temp, round(temp * 9 / 5 + 32, 3)
 
 
 class Far(Interface_temp):
-
-    def __init__(self):
-        self.temp = None
-
-    def setTemp(self, temp):
-        self.temp = temp
-
-    def getTemp(self):
-        return self.temp
 
     def letsgo(self):
         print(f"{round((temp - 32) * 5 / 9, 3)}°C == {round((temp - 32) * 5 / 9 + 273.15, 3)}°K == {temp}°F ")

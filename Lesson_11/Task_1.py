@@ -12,7 +12,6 @@ class Food:
         self.name = name
         self.price = price
         self.mass = mass
-        super().__init__()
         Food.food_list.append(self)  # Список из пунктов меню (список словарей)
 
 
@@ -27,13 +26,6 @@ bludo_6 = Food(1, "Форель какая-нибудь", 17.15, 750)
 
 class Zakaz(Food):
     """Класс по работе с заказами"""
-
-    def __init__(self, zakaz_1, pay):
-        super().__init__()
-        self.zakaz_1 = zakaz_1
-        self.pay = pay
-        self.zakaz_1 = {}
-        self.zakaz_2 = []
 
     zakaz_1 = {}
     zakaz_2 = []
@@ -67,7 +59,7 @@ class Zakaz(Food):
         if pay - money > 0:
             print("\nВнесена предоплата в размере: ", money, "р.", "\nСумма окончательного расчета: ",
                   round(pay - money, 2), "р.")
-        elif round(pay - money, 2) == 0:
+        elif pay == money:
             print("\nВнесена предоплата в размере: ", money, "р.", "\nСумма окончательного расчета: ",
                   abs(round(pay - money, 2)), "р.", "\nСчет закрыт")
         else:

@@ -64,3 +64,4 @@ class Validator:
 
 validator = Validator()
 print(validator.validate("user_login", "Some!Passwo5rd", "mail@mail.c.om"))
+

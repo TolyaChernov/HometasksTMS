@@ -27,3 +27,4 @@ INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) 
 -----Task_4
 DELETE FROM users WHERE user_id = 1;
 DELETE FROM category WHERE category_id = 1;
+

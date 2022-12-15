@@ -1,0 +1,12 @@
+---1.1
+SELECT SUM(Bytes) FROM tracks;
+
+---1.2
+SELECT COUNT() as count FROM employees;
+SELECT COUNT() as count FROM customers;
+
+---1.3
+SELECT name FROM tracks WHERE AlbumId = (SELECT AlbumId FROM albums WHERE Title = "A-Sides") ORDER BY name;
+
+---1.4
+SELECT AlbumId as Album_Id, SUM(UnitPrice) as Album_Price FROM tracks GROUP BY AlbumId;

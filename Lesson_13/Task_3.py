@@ -17,7 +17,7 @@ class Validator:
 
     def validate_login(self, s):
 
-        pattern = r'[a-zA-Z0-9-_\.]{5,10}$'
+        pattern = r"[a-zA-Z0-9]{6,}$"
         if re.match(pattern, s) is not None:
             return True
         else:
@@ -25,7 +25,7 @@ class Validator:
 
     def validate_password(self, s):
 
-        pattern = r'[A-Za-z0-9@#$%^&+=!]{8,}'
+        pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         if re.match(pattern, s) is not None:
             return True
         else:
@@ -33,7 +33,7 @@ class Validator:
 
     def validate_email(self, s):
 
-        pattern = r"^[-\w\.]+@([-\w]+\.)+[-\w]{2}$"
+        pattern="^[-\w\.]+@[-\w]+\.+[-\w]{2}$"
         if re.match(pattern, s) is not None:
             return True
         else:

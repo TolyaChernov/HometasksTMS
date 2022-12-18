@@ -3,9 +3,10 @@
 
 def names_gen(path, letter: str):
     with open(path, "r") as file:
-        list_name = (name for name in file if letter in name)
-        for i in list_name:
-            yield i
+        for line in file:
+            if line.startswith(letter):
+                yield line
+
 
 
 names_with_letter = names_gen("unsorted_names.txt", "A")

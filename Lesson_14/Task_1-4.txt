@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS posts;
+
+-----Task_1
+DROP TABLE IF EXISTS  users;
+CREATE TABLE users (user_id INTEGER PRIMARY KEY AUTOINCREMENT, first_name TEXT, last_name TEXT, gender TEXT, login TEXT, email TEXT, register_date TEXT);
+INSERT INTO users (first_name, last_name, gender, login, email, register_date) VALUES("Tim", "Smith", "Male", "tim_smith_1984", "smith_is_here@gmail.com", "2020-12-21");
+INSERT INTO users (first_name, last_name, gender, login, email, register_date) VALUES("Tom", "Smith", "Male", "tom_smith_1984", "sm1th_is_here@gmail.com", "2020-12-22");
+INSERT INTO users (first_name, last_name, gender, login, email, register_date) VALUES("Jane", "Smith", "Female", "jane_smith_1982", "smithjane_is_here@gmail.com", "2020-12-25");
+
+-----Task_2
+DROP TABLE IF EXISTS category;
+CREATE TABLE IF NOT EXISTS category (category_id INTEGER PRIMARY KEY AUTOINCREMENT, category_title TEXT);
+INSERT INTO category(category_title) VALUES("Science");
+INSERT INTO category (category_title) VALUES("World");
+INSERT INTO category (category_title) VALUES("Home");
+
+-----Task_3
+DROP TABLE IF EXISTS  posts;
+CREATE TABLE IF NOT EXISTS posts (post_id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, date_created TEXT, post TEXT, post_author_id INTEGER, post_category_id INTEGER, FOREIGN KEY (post_author_id) REFERENCES users(user_id) ON DELETE CASCADE, FOREIGN KEY (post_category_id) REFERENCES category(category_id) ON DELETE SET NULL);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("Science #1", "2022-12-05", "Post Science #1", 2, 1);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("World #1", "2022-11-09", "Post World #1", 1, 2);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("World #2", "2022-11-09", "Post World #2", 1, 2);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("Science #2", "2022-10-20", "Post Science #1", 3, 1);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("Home #1", "2022-10-20", "Post Home #1", 2, 3);
+INSERT INTO posts (title, date_created, post, post_author_id, post_category_id) VALUES("Home #2", "2022-10-20", "Post Home #2", 1, 3);
+
+-----Task_4
+DELETE FROM users WHERE user_id = 1;
+DELETE FROM category WHERE category_id = 1;
+

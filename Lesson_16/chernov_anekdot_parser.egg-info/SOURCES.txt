@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+chernov_anekdot_parser.egg-info/PKG-INFO
+chernov_anekdot_parser.egg-info/SOURCES.txt
+chernov_anekdot_parser.egg-info/dependency_links.txt
+chernov_anekdot_parser.egg-info/not-zip-safe
+chernov_anekdot_parser.egg-info/requires.txt
+chernov_anekdot_parser.egg-info/top_level.txt

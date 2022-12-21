@@ -30,3 +30,4 @@ word_1: str = input("Введите название альбома: ")
 trek(word_1)
 
 db.close()
+

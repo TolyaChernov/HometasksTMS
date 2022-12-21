@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: chernov-anekdot-parser
+Version: 0.1
+Summary: The script displays one random anecdote from the site anekdot.ru
+Home-page: http://github.com/<account>/<repo>
+Author: Anatoliy Chernov 
+Author-email: chernov_anatoliy@tut.by
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.9, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+This is a simple exercise to publish a package onto PyPi.
+

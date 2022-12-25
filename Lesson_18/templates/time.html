@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Время
+{% endblock %}
+
+
+{% block body %}
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h2>Текущие время и дата: {{ moment().format() }}</h2>
+    </div>
+{% endblock %}
+

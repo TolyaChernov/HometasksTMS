@@ -1,0 +1,15 @@
+div.container {}
+
+.flash {
+    padding: 10px;
+}
+
+.flash.success {
+    border: 1px solid #049b2f;
+    background: #99cca8;
+}
+
+.flash.error {
+    border: 1px solid #dd0b0b;
+    background: #d1a6a6;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Обратная связь
+{% endblock %}
+
+
+{% block body %}
+<form action="/contakt" method='post' class="form-contakt">
+    <h2>Форма обратной связи</h2>
+    {% for cat, msg in get_flashed_messages(True) %}
+    <div class="flash {{cat}}"> {{msg}}</div>
+    {% endfor %}
+    <p><label>
+            <h4>Имя: </h4>
+        </label>
+        <input type="text" name="username" value="" required />
+    <p><label>
+            <h4>Email: </h4>
+        </label>
+        <input type="text" name="email" value="" required />
+    <p><label>
+            <h4>Сообщение: </h4>
+        </label>
+    <p><textarea name="message" rows="7" cols="40"></textarea>
+    <p><input type="submit" value="Отправить" />
+</form>
+
+
+{% endblock %}
